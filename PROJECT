@@ -1,0 +1,19 @@
+domain: example.net
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: multi-tenancy-frontend-operator
+repo: github.com/balamuru/multi-tenancy-frontend-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.net
+  group: multitenancy
+  kind: TenancyFrontend
+  path: github.com/balamuru/multi-tenancy-frontend-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
